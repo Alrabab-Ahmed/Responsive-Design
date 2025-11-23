@@ -1,9 +1,4 @@
-.images img {
-    max-width: 100%;
-    height: auto;
-}
-
-hover {
+.hover {
   padding: 15px;
   background: green;
   color: white;
@@ -15,12 +10,23 @@ one;
   transform: scale(1.1);   
 }
 
-.images {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 10px;
+.options {
+  display: none;        
+  background: grey;     
+  padding: 4px;         
 }
+
+.dropdown:hover .options {
+  display: block;      
+}
+
+.options a {
+  display: block;       
+  padding: 5px;        
+  text-decoration: none;
+  color: black;
+}
+
 .zoomimage {
   transition: 0.5s;       
 }
@@ -28,11 +34,3 @@ one;
 .zoomimage:hover {
   transform: scale(1.2);   
 }
-
-
-@media (min-width: 600px) {
-    .images { grid-template-columns: 1fr 1fr; }
-}
-
-@media (min-width: 1024px) {
-    .images { grid-template-columns: 1fr 1fr 1fr; }
